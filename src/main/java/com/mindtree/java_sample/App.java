@@ -26,7 +26,7 @@ public class App
 		String sql_select = "Select * From student_info";
 		
 		try(Connection conn = DBconnection.createNewDBconnection()){
-			PreparedStatement prepSmt = conn.prepareStatement("insert into student_info values('1','SUMIT','India', 'Java')");
+			PreparedStatement prepSmt = conn.prepareStatement("insert into student_info values('1','SUMIT','India','')");
 			stmt = conn.createStatement();
 //			stmt.executeQuery("insert into student_info values('1','SUMIT','India', 'Java')");
 			prepSmt.execute();
@@ -41,7 +41,7 @@ public class App
 				stdObject.setId(Integer.valueOf(results.getString("id")));
 				stdObject.setName(results.getString("name"));
 				stdObject.setAddress(results.getString("Address"));
-				stdObject.setCourse_code(results.getString("course_code"));
+				
 				
 				studentsList.add(stdObject);
 			 }

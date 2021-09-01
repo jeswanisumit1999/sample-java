@@ -18,8 +18,7 @@ public class Student {
 	private int id;
 	private String name;
 	private String address;
-	private String course_code;
-
+	
 	public int getId() {
 		return id;
 	}
@@ -44,10 +43,4 @@ public class Student {
 	}
 		
 
-	public String getCourse_code() {
-		return course_code;
-	}
-	public void setCourse_code(String course_code) {
-		this.course_code = course_code;
-	}
 }
